@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.259 31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ccebcc;
+        stroke-linecap: round;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="menu" transform="translate(-1173 -44.5)">
+    <line id="Ligne_10" data-name="Ligne 10" class="cls-1" x1="48.259" transform="translate(1176 47.5)"/>
+    <line id="Ligne_11" data-name="Ligne 11" class="cls-1" x1="48.259" transform="translate(1176 60.5)"/>
+    <line id="Ligne_12" data-name="Ligne 12" class="cls-1" x1="48.259" transform="translate(1176 72.5)"/>
+  </g>
+</svg>

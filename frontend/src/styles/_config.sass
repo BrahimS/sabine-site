@@ -1,0 +1,88 @@
+// All the style goes here
+
+// Variables
+$white: #ffffff
+$black: #000000
+$antiquewhite: antiquewhite
+$primaryColor: #00527E
+$secondaryColor: $white
+$thirdColor: #6EC4DC
+$forthColor: #CCEBCC
+$greenButton: #8DF5B9
+$headlineColor: #6EC4DC
+$linkColor: #1f1d7b
+$menuColor: #5CB6E6
+
+// Font Stacks
+$font_url__google1 : 'https://fonts.googleapis.com/css?family=Noto+Serif:700'
+$font_url__google2 : 'https://fonts.googleapis.com/css?family=Josefin+Sans:300'
+
+// Typography
+$font_family__primary : 'Playfair Display', serif
+$font_family__secondary : 'Josefin Sans', sans-serif
+
+// Font Weights
+$font_weight__thin : 100
+$font_weight__light : 300
+$font_weight__medium : 400
+$font_weight__semi : 600
+$font_weight__bold : 700
+$font_weight__ultra-bold : 900
+
+// Text
+$browser_context: 16px
+$font_size__base: 16px
+$base_line__height : 1.5
+$base_letter__spacing : 1px
+
+// Border raidius
+$br_default: .4em
+$br_round: 50%
+
+// Transitions
+$trns_duration  : .3s
+
+// Margin and Padding
+$margin: 50px
+
+
+// Breakpoints
+$brkpoint_sm: 1px
+$brkpoint_md: 767px
+$brkpoint_lg: 1024px
+$brkpoint_xlg: 1600px
+
+// MIXINS
+
+// BEM Selectors
+// 1 - element
+@mixin e($element)
+  &__#{$element}
+    @content
+
+// 2 - modifier
+@mixin m($modifier)
+  &_#{$modifier}
+    @content
+
+
+// Media queries
+@mixin mediaQ($break)
+  @if $break == "small"
+    @media (min-width: $brkpoint_sm) and (max-width: $brkpoint_md)
+        @content
+
+  @else if $break == "medium"
+    @media (min-width: $brkpoint_md + 1)
+      @content
+
+  @else if $break == "large"
+    @media (min-width: $brkpoint_lg)
+      @content
+
+  @else if $break == "x_large"
+    @media (min-width: $brkpoint_xlg)
+      @content
+
+  @else
+    @error "Ai! No value could be retrieved for `#{$break}` "

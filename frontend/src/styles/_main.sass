@@ -1,0 +1,146 @@
+// main style
+html,body
+	width: 100vw
+	height: 100vh
+	background: $primaryColor
+	color: $secondaryColor
+	font-family: $font_family__primary
+	overflow: hidden
+
+*, *:after, *:before
+	box-sizing: border-box
+
+
+
+
+.wrapper
+	display: block
+	width: 100%
+	height: 100%
+	padding: $margin
+	@include mediaQ(small)
+		padding: ($margin / 2)
+	@include mediaQ(medium)
+		overflow: hidden
+		display: block
+
+
+
+
+.logo
+	width: 8%
+	@include mediaQ(small)
+		width: 20%
+	@include mediaQ(medium)
+		width: 18%
+	@include mediaQ(large)
+		width: 7%
+
+
+
+
+// .content
+// 	display: flex
+// 	flex-direction: row
+// 	flex-wrap: wrap
+// 	justify-content: space-between
+// 	width: 100%
+// 	height: 100%
+// 	margin: ($margin * 2) 0
+// 	font-size: ($font_size__base + 1)
+// 	line-height: ($base_line__height - .2)
+// 	letter-spacing: em($base_letter__spacing / 2)
+// 	font-weight: $font_weight__light
+// 	font-family: $font_family__secondary
+// 	@include mediaQ(small)
+// 		margin-top: em(-$margin * 2)
+// 	@include mediaQ(medium)
+// 		margin-top: em(-$margin + 40)
+
+
+
+.one
+	@include mediaQ(small)
+		width: 100%
+	@include mediaQ(medium)
+		width: 80%
+	@include mediaQ(large)
+		width: 45%
+
+
+
+
+	.two
+		width: 50%
+		@include mediaQ(small)
+			display: none
+		@include mediaQ(large)
+			display: block
+
+.illustration
+	background-image: url(../img/fleur.svg)
+	background-repeat: no-repaeat
+	background-size: cover
+	background-position: 0 0
+	width: 12em * 4
+	height: 12em * 4
+	position: absolute
+	right: em(-300px)
+	top: 5em
+	@extend %rotate
+	@include mediaQ(medium)
+		display: none
+	@include mediaQ(large)
+		display: block
+
+.postureYoga
+	background-image: url(../img/posture4.svg)
+	background-repeat: no-repaeat
+	background-size: cover
+	background-position: 0 0
+	width: 12em * 4
+	height: 12em * 3
+	position: absolute
+	right: em(40px)
+	bottom: em(-120px)
+	@include mediaQ(medium)
+		right: em(0px)
+		opacity: .2
+	@include mediaQ(large)
+		opacity: 1
+
+
+.cta
+	width: em(160px)
+	height: em(40px)
+	padding: em(10px) em(5px)
+	border-radius: em(15px)
+	border: em(1.5px) solid $forthColor
+	margin-right: em(10px)
+	transition: $trns_duration ease
+	outline: none
+	@include mediaQ(small)
+		width: 45%
+		height: auto
+		margin-right: em(0px)
+	@include mediaQ(medium)
+		width: 50%
+		margin-bottom: em(10px)
+	@include mediaQ(large)
+		width: 30%
+
+	@include e('one')
+		background: transparent
+		color: $secondaryColor
+
+	@include e('two')
+		background: $greenButton
+		border-color: $greenButton
+		color: $primaryColor
+		transition: $trns_duration ease
+
+		&:hover
+			background: $thirdColor
+			border-color: $thirdColor
+			box-shadow: em(1px) em(2px) em(3px) rgba(0,0,0, .7)
+			margin-top: em(-2px)
