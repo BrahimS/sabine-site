@@ -1,1 +1,1 @@
-export const Config = {apiUrl: 'http://192.168.0.26/wordpress'}
+export const Config = {apiUrl: 'http://yogis-site.fr/react'}
