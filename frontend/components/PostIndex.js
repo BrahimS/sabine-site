@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout.js';
-import fetch from 'isomorphic-unfetch';
-import { Config } from '../config';
+import React, { Component } from "react";
+import Link from "next/link";
+import fetch from "isomorphic-unfetch";
+import { Config } from "../config";
 
 export default class PostIndex extends Component {
   static defaultProps = {
